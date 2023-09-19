@@ -1,0 +1,13 @@
+apiVersion: test_dart/v1
+kind: Service
+metadata:
+  name: test_dart
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: docker.io/{username}/test_dart
+          env:
+          - name: TARGET
+            value: "Test with Dart"
